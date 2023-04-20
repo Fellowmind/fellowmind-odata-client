@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fellowmind.OData.Client</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:Fellowmind.OData.Client.ODataClient`1" -->
+        <member name="F:Fellowmind.OData.Client.ODataClient`1._targetCompany">
+            <summary>
+            Defines target company to use for Dynamics Finance Operations GET and DELETE requests.
+            </summary>
+        </member>
+        <member name="E:Fellowmind.OData.Client.ODataClient`1.ContextCreated">
+            <inheritdoc />
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.#ctor(Microsoft.OData.Extensions.Client.IODataClientFactory,Fellowmind.OData.Client.Core.IODataClientBaseSettings,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Fellowmind.OData.Client.ODataClient`1"/> class.
+            </summary>
+            <param name="clientFactory">The odataclientfactory.</param>
+            <param name="clientSettings">The client settings.</param>
+            <param name="clientName">The name of the ODataClient and HttpClient. Used when you have multiple clients that use different HttpClients.</param>
+        </member>
+        <member name="P:Fellowmind.OData.Client.ODataClient`1.DataContext">
+            <summary>
+            OData context used to communicate with target system. Only make queries through this context! For other operations, use the methods of this class.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Fellowmind.OData.Client.ODataClient`1.SetDynamicsOperationsTargetCompany(System.String)" -->
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.InitializeTracking``1">
+            <summary>
+            Enables tracking for the given entity type. Tracking is also automatically initialized when calling TrackEntity for non-tracked entity type.
+            </summary>
+            <typeparam name="T">Entity type for which tracking is set up.</typeparam>
+            <returns>Data service collection for tracking the given entity type.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.IsTrackingInitialized``1">
+            <summary>
+            Returns true, if tracking has been enabled for the given entity type.
+            </summary>
+            <typeparam name="T">Entity type to check.</typeparam>
+            <returns>True if tracking is enabled.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.CreateAndTrackEntity``1">
+            <summary>
+            Creates new instance of the specified entity and sets it for change tracking.
+            </summary>
+            <typeparam name="T">Type of entity to create.</typeparam>
+            <returns>New instance of tracked entity.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.GetEntityAsync``1(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.GetEntityAsync``1(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.GetEntityAndTrackAsync``1(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.GetEntityAndTrackAsync``1(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.CreateEntity``1">
+            <summary>
+            Creates new instance of the specified entity.
+            </summary>
+            <typeparam name="T">Type of entity to create.</typeparam>
+            <returns>New entity instance.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.TrackEntity``1(``0)">
+            <summary>
+            Adds entity to be tracked for changes.
+            Starting tracking for 'Unchanged' entity creates 'Update' message.
+            Starting tracking for 'Detached' entity create 'Insert' message.
+            </summary>
+            <typeparam name="T">Type of entity to track.</typeparam>
+            <param name="entity">Entity to track.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.UntrackEntity``1(``0)">
+            <summary>
+            Removes entity from being tracked for changes. Does not generate delete operation.
+            </summary>
+            <typeparam name="T">Type of entity to untrack.</typeparam>
+            <param name="entity">Entity to untrack.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.DeleteEntity``1(``0)">
+            <summary>
+            This creates delete operation for the given entity. To stop tracking of entity use UntrackEntity. To detach an entity use DetachEntity.
+            </summary>
+            <typeparam name="T">Type of entity to delete.</typeparam>
+            <param name="entity">Entity to delete.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.AttachEntityAndTrack``1(``0)">
+            <summary>
+            Attaches entity to the data context. If an entity is already tracked by another context, that tracking will be removed.
+            </summary>
+            <typeparam name="T">Entity type to attach.</typeparam>
+            <param name="entity">Entity to attach.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.AttachEntity``1(``0)">
+            <summary>
+            Attaches entity to the data context. If an entity is already tracked by another context, that tracking will be removed.
+            </summary>
+            <typeparam name="T">Entity type to attach.</typeparam>
+            <param name="entity">Entity to attach.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.IsEnumerableBaseEntityType(System.Type)">
+            <summary>
+            Checks if the given type can be casted to IEnumerable{BaseEntityType}.
+            </summary>
+            <param name="type">Type to check.</param>
+            <returns>True if the given type can be casted to IEnumerable{BaseEntityType}.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.DetachEntity``1(``0)">
+            <summary>
+            Detaches given entity from data context.
+            </summary>
+            <typeparam name="T">Entity type to detach.</typeparam>
+            <param name="entity">Entity to detach.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.SaveChangesAsync(Fellowmind.OData.Client.Core.SaveOptions)">
+            <summary>
+            Save changes to the target system with specified options.
+            </summary>
+            <param name="saveOptions">Options for how to save. See <see cref="T:Fellowmind.OData.Client.Core.SaveOptions"/></param>
+            <returns>A <see cref="T:Fellowmind.OData.Client.Core.IODataSaveResult"/> wrapping all responses from the save operation.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.SaveChangesAsync">
+            <summary>
+            Save changes to the target system and reset the client to the original state.
+            </summary>
+            <remarks>Uses <see cref="T:Fellowmind.OData.Client.Core.SaveOptions"/> 'BatchWithSingleChangeset' and 'PostOnlySetProperties'.</remarks>
+            <returns>A <see cref="T:Fellowmind.OData.Client.Core.IODataSaveResult"/> wrapping all responses from the save operation.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.SaveChangesWithEntityResultsAsync(Fellowmind.OData.Client.Core.SaveOptions)">
+            <summary>
+            Save changes to the target system with specified options.
+            </summary>
+            <param name="saveOptions">Options for how to save. See <see cref="T:Fellowmind.OData.Client.Core.SaveOptions"/></param>
+            <returns>A <see cref="T:Fellowmind.OData.Client.Core.IODataSaveResult"/> wrapping all responses from the save operation.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.UntrackAll``1">
+            <summary>
+            Clears tracking collection for the given type.
+            </summary>
+            <typeparam name="T">Entity type to untrack.</typeparam>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.UntrackAll">
+            <summary>
+            Clears all tracking collections and removes items from entity and link collections.
+            </summary>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.DataContext_BuildingRequest(System.Object,Microsoft.OData.Client.BuildingRequestEventArgs)">
+            <summary>
+            Sets target company information to all GET requests.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.AddFilterParameterToUri(System.Uri,System.String)">
+            <summary>
+            Adds given parameter to Uri while trying to maintain correctness.
+            </summary>
+            <param name="url">Uri to modify.</param>
+            <param name="parameter">Parameter to add to the Uri.</param>
+            <returns>Resulting Uri after modification.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.AddParameterToUri(System.Uri,System.String)">
+            <summary>
+            Adds given parameter to Uri while trying to maintain correctness.
+            </summary>
+            <param name="url">Uri to modify.</param>
+            <param name="parameter">Parameter to add to the Uri.</param>
+            <returns>Resulting Uri after modification.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataClient`1.RefreshDataContext">
+            <summary>
+            Refreshes the data context and tracking collections to their original states.
+            </summary>
+        </member>
+        <member name="T:Fellowmind.OData.Client.ODataSaveResult">
+            <summary>
+            Implements <see cref="T:Fellowmind.OData.Client.Core.IODataSaveResult"/>.
+            </summary>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataSaveResult.#ctor(System.Boolean,Microsoft.OData.Client.DataServiceResponse)">
+            <summary>
+            Creates an instance of <see cref="T:Fellowmind.OData.Client.ODataSaveResult"/>.
+            </summary>
+            <param name="success">A value indicating if the operation was successful.</param>
+            <param name="response">A <see cref="T:Microsoft.OData.Client.DataServiceResponse"/> from OData client.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.ODataSaveResult.#ctor(System.Boolean,Microsoft.OData.Client.DataServiceResponse,System.Collections.Generic.IDictionary{Microsoft.OData.Client.BaseEntityType,System.Uri})">
+            <summary>
+            Creates an instance of <see cref="T:Fellowmind.OData.Client.ODataSaveResult"/>.
+            </summary>
+            <param name="success">A value indicating if the operation was successful.</param>
+            <param name="response">A <see cref="T:Microsoft.OData.Client.DataServiceResponse"/> from OData client.</param>
+            <param name="entityResults">Save operation entity results.</param>
+        </member>
+        <member name="P:Fellowmind.OData.Client.ODataSaveResult.Response">
+            <inheritdoc />
+        </member>
+        <member name="P:Fellowmind.OData.Client.ODataSaveResult.Success">
+            <inheritdoc />
+        </member>
+        <member name="P:Fellowmind.OData.Client.ODataSaveResult.EntityResults">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

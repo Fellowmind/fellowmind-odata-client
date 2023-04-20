@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Juho Vainio, Mikko Kunnari</Authors>
+    <Company>Fellowmind Oy Ab</Company>
+    <Description>Helper library for Microsoft.OData.Client that provides generic methods for working with CE and OPS entities.</Description>
+    <PackageTags>odata</PackageTags>
+    <Copyright>Fellowmind Oy Ab</Copyright>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Version>4.2.0</Version> 
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <LangVersion>7.3</LangVersion>
+    <PackageIcon>fellowmind emblem_b_128x128px.jpg</PackageIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Code\Fellowmind.OData.Client\Fellowmind.OData.Client\Fellowmind.OData.Client.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\img\fellowmind emblem_b_128x128px.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.OData.Client" Version="7.9.0" />
+    <PackageReference Include="Microsoft.OData.Extensions.Client" Version="1.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fellowmind.OData.Client.Core\Fellowmind.OData.Client.Core.csproj" />
+  </ItemGroup>
+
+</Project>

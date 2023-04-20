@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fellowmind.OData.Client.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Fellowmind.OData.Client.Core.AccessTokenAuthenticator">
+            <summary>
+            An authenticator that only holds an access token.
+            </summary>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.AccessTokenAuthenticator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Fellowmind.OData.Client.Core.AccessTokenAuthenticator"/> class.
+            </summary>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.AccessTokenAuthenticator.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Fellowmind.OData.Client.Core.AccessTokenAuthenticator"/> class.
+            </summary>
+            <param name="accessToken">The access token to store.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.AccessTokenAuthenticator.SetAccessToken(System.String)">
+            <summary>
+            Sets the access token.
+            </summary>
+            <param name="accessToken"></param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.AccessTokenAuthenticator.GetAccessToken">
+            <summary>
+            Gets the access token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.AccessTokenAuthenticator.GetAccessTokenAsync">
+            <summary>
+            Gets the access token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Fellowmind.OData.Client.Core.AuthenticationHandler">
+            <summary>
+            A <see cref="T:System.Net.Http.DelegatingHandler"/> for <see cref="T:Fellowmind.OData.Client.Core.IODataClientAuthenticator"/> that sets the authorization token to requests.
+            </summary>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.AuthenticationHandler.#ctor(Fellowmind.OData.Client.Core.IODataClientAuthenticator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Fellowmind.OData.Client.Core.AuthenticationHandler"/> class.
+            </summary>
+            <param name="odataClientAuthenticator">An instance of a <see cref="T:Fellowmind.OData.Client.Core.IODataClientAuthenticator"/>.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.AuthenticationHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Fellowmind.OData.Client.Core.ContextCreatedEventArgs`1">
+            <summary>
+            Event arguments for ContextCreated event.
+            </summary>
+            <typeparam name="TClient">DataServiceContext-based OData client context type.</typeparam>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.ContextCreatedEventArgs`1.#ctor(`0)">
+            <summary>
+            Creates an instance of a <see cref="T:Fellowmind.OData.Client.Core.ContextCreatedEventArgs`1"/>.
+            </summary>
+            <param name="client">The created OData client context.</param>
+        </member>
+        <member name="P:Fellowmind.OData.Client.Core.ContextCreatedEventArgs`1.DataContext">
+            <summary>
+            Gets the created <see cref="T:Microsoft.OData.Client.DataServiceContext"/>.
+            </summary>
+        </member>
+        <member name="T:Fellowmind.OData.Client.Core.IODataClient`1">
+            <summary>
+            Interface defining OData client for communication with FO and CE.
+            </summary>
+            <typeparam name="TClient">Undelying CE or FO client type.</typeparam>
+        </member>
+        <member name="E:Fellowmind.OData.Client.Core.IODataClient`1.ContextCreated">
+            <summary>
+            Fires after DataServiceContext-based OData context is created.
+            </summary>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.AttachEntity``1(``0)">
+            <summary>
+            Attaches entity to the data context. If an entity is already tracked by another context, that tracking will be removed.
+            </summary>
+            <typeparam name="T">Entity type to attach.</typeparam>
+            <param name="entity">Entity to attach.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.AttachEntityAndTrack``1(``0)">
+            <summary>
+            Attaches entity to the data context. If an entity is already tracked by another context, that tracking will be removed.
+            </summary>
+            <typeparam name="T">Entity type to attach.</typeparam>
+            <param name="entity">Entity to attach.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.DetachEntity``1(``0)">
+            <summary>
+            Detaches given entity from data context.
+            </summary>
+            <typeparam name="T">Entity type to detach.</typeparam>
+            <param name="entity">Entity to detach.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.GetEntityAsync``1(System.Object)">
+            <summary>
+            Get entity of the given type and ID.
+            </summary>
+            <typeparam name="T">Type of entity to get.</typeparam>
+            <param name="id">ID of entity to get.</param>
+            <returns>Entity of the given type and ID or null if not found.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.GetEntityAsync``1(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Get entity of the given type and ID.
+            </summary>
+            <typeparam name="T">Type of entity to get.</typeparam>
+            <param name="ids">Multi-key ID of entity to get. Key of the dictionary is ID field name and value is the ID value.</param>
+            <returns>Entity of the given type and ID or null if not found.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.GetEntityAndTrackAsync``1(System.Object)">
+            <summary>
+            Get entity of the given type and ID and mark it for tracking.
+            </summary>
+            <typeparam name="T">Type of entity to get.</typeparam>
+            <param name="id">ID of entity to get.</param>
+            <returns>Entity of the given type and ID or null if not found.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.GetEntityAndTrackAsync``1(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Get entity of the given type and ID and mark it for tracking.
+            </summary>
+            <typeparam name="T">Type of entity to get.</typeparam>
+            <param name="ids">Multi-key ID of entity to get. Key of the dictionary is ID field name and value is the ID value.</param>
+            <returns>Entity of the given type and ID or null if not found.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.CreateAndTrackEntity``1">
+            <summary>
+            Creates new instance of the specified entity and sets it for change tracking.
+            </summary>
+            <typeparam name="T">Type of entity to create.</typeparam>
+            <returns>New instance of tracked entity.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.CreateEntity``1">
+            <summary>
+            Creates new instance of the specified entity.
+            </summary>
+            <typeparam name="T">Type of entity to create.</typeparam>
+            <returns>New entity instance.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.DeleteEntity``1(``0)">
+            <summary>
+            This creates delete operation for the given entity. To stop tracking of entity use UntrackEntity. To detach an entity use DetachEntity.
+            </summary>
+            <typeparam name="T">Type of entity to delete.</typeparam>
+            <param name="entity">Entity to delete.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.TrackEntity``1(``0)">
+            <summary>
+            Adds entity to be tracked for changes.
+            Starting tracking for 'Unchanged' entity creates 'Update' message.
+            Starting tracking for 'Detached' entity create 'Insert' message.
+            </summary>
+            <typeparam name="T">Type of entity to track.</typeparam>
+            <param name="entity">Entity to track.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.UntrackEntity``1(``0)">
+            <summary>
+            Removes entity from being tracked for changes. Does not generate delete operation.
+            </summary>
+            <typeparam name="T">Type of entity to untrack.</typeparam>
+            <param name="entity">Entity to untrack.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.InitializeTracking``1">
+            <summary>
+            Enables tracking for the given entity type. Tracking is also automatically initialized when calling TrackEntity for non-tracked entity type.
+            </summary>
+            <typeparam name="T">Entity type for which tracking is set up.</typeparam>
+            <returns>Data service collection for tracking the given entity type.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.IsTrackingInitialized``1">
+            <summary>
+            Returns true, if tracking has been enabled for the given entity type.
+            </summary>
+            <typeparam name="T">Entity type to check.</typeparam>
+            <returns>True if tracking is enabled.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.SaveChangesAsync">
+            <summary>
+            Save changes to the target system and reset the client to the original state.
+            </summary>
+            <returns>DataServiceResponse wrapping all responses from the save operation.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.SaveChangesAsync(Fellowmind.OData.Client.Core.SaveOptions)">
+            <summary>
+            Save changes to the target system and reset the client to the original state.
+            </summary>
+            <returns>DataServiceResponse wrapping all responses from the save operation.</returns>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClient`1.SaveChangesWithEntityResultsAsync(Fellowmind.OData.Client.Core.SaveOptions)">
+            <summary>
+            Saves changes to the target system.
+            </summary>
+            <param name="saveOptions">Options for how to save. See <see cref="T:Fellowmind.OData.Client.Core.SaveOptions"/></param>
+            <returns>Dictionary where saved entity is the key and the value is the Identity URI of the entity. ID can be parsed from the URI.</returns>
+        </member>
+        <member name="T:Fellowmind.OData.Client.Core.IODataClientAuthenticator">
+            <summary>
+            Defines an interface for authentication libraries.
+            </summary>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.IODataClientAuthenticator.GetAccessTokenAsync">
+            <summary>
+            Gets the access token. Requests for a new token if neccessary.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Fellowmind.OData.Client.Core.IODataSaveResult">
+            <summary>
+            Defines OData save result.
+            </summary>
+        </member>
+        <member name="P:Fellowmind.OData.Client.Core.IODataSaveResult.Response">
+            <summary>
+            Gets the <see cref="T:Microsoft.OData.Client.DataServiceResponse"/> from OData client.
+            </summary>
+        </member>
+        <member name="P:Fellowmind.OData.Client.Core.IODataSaveResult.Success">
+            <summary>
+            Gets a value indicating whether the operation was successful or not.
+            </summary>
+        </member>
+        <member name="P:Fellowmind.OData.Client.Core.IODataSaveResult.EntityResults">
+            <summary>
+            Save operation entity results.
+            </summary>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.ODataClientExtensions.WithTargetCompany``1(Microsoft.OData.Client.DataServiceQuery{``0},System.String)">
+            <summary>
+            Sets target company for Dynamics Finance &amp; Operations GET requests.
+            </summary>
+            <remarks>By default, Dynamics F&amp;O OData requests return data only for the company set to the integration user.</remarks>
+            <param name="query">The query.</param>
+            <param name="companyId">Empty or null string will return data for all companies. Giving a company (DataAreaId) will target queries to data of that company.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.ODataClientExtensions.WithCrossCompany``1(Microsoft.OData.Client.DataServiceQuery{``0})">
+            <summary>
+            Sets cross company for Dynamics Finance &amp; Operations requests.
+            </summary>
+            <remarks>By default, Dynamics F&amp;O OData requests return data only for the company set to the integration user.</remarks>
+            <returns>An entity received using 'cross-company=true' cannot be updated or deleted in F&amp;O. Get the entity to update using 'WithTargetCompany'.</returns>
+            <param name="query">The query.</param>
+        </member>
+        <member name="M:Fellowmind.OData.Client.Core.ODataClientExtensions.CreateDataContext``1(System.Uri)">
+            <summary>
+            Creates OData service for working with the given entity type.
+            </summary>
+            <returns>Data service collection for the given entity type and data context for the OData service.</returns>
+        </member>
+        <member name="T:Fellowmind.OData.Client.Core.SaveOptions">
+            <summary>
+            Save option flags to modify how the save operation is executed.
+            </summary>
+        </member>
+        <member name="F:Fellowmind.OData.Client.Core.SaveOptions.None">
+            <summary>
+            No flags. Save with Microsoft.OData.Client default functionality.
+            </summary>
+        </member>
+        <member name="F:Fellowmind.OData.Client.Core.SaveOptions.BatchWithSingleChangeset">
+            <summary>
+            Batches all changes in the DataContext into one transaction. On by default.
+            </summary>
+        </member>
+        <member name="F:Fellowmind.OData.Client.Core.SaveOptions.PostOnlySetProperties">
+            <summary>
+            Includes only changes detected by change tracking. On by default.
+            </summary>
+        </member>
+        <member name="F:Fellowmind.OData.Client.Core.SaveOptions.SkipContextReCreationAfterSave">
+            <summary>
+            Set this flag to skip context re-creation after save.
+            </summary>
+        </member>
+    </members>
+</doc>

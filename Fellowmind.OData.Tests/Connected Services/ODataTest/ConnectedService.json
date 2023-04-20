@@ -1,0 +1,26 @@
+{
+  "ProviderId": "Microsoft.OData.ConnectedService",
+  "Version": "0.2.0",
+  "GettingStartedDocument": {
+    "Uri": ""
+  },
+  "ExtendedData": {
+    "EnableNamingAlias": false,
+    "IgnoreUnexpectedElementsAndAttributes": false,
+    "IncludeT4File": false,
+    "ServiceName": "ODataTest",
+    "Endpoint": "C:\\dev\\Fellowmind\\Fellowmind.OData.Client\\Fellowmind.OData.Tests\\metadata.xml",
+    "EdmxVersion": {
+      "Major": 4,
+      "Minor": 0,
+      "Build": 0,
+      "Revision": 0,
+      "MajorRevision": 0,
+      "MinorRevision": 0
+    },
+    "GeneratedFileNamePrefix": "Reference",
+    "UseNameSpacePrefix": false,
+    "NamespacePrefix": null,
+    "UseDataServiceCollection": true
+  }
+}
