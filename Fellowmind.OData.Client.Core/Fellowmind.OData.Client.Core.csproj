@@ -12,7 +12,7 @@
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>odata</PackageTags>
-    <Version>4.2.0</Version>
+    <Version>4.2.1</Version>
     <PackageIcon>fellowmind emblem_b_128x128px.jpg</PackageIcon> 
   </PropertyGroup>
 
@@ -26,6 +26,14 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
