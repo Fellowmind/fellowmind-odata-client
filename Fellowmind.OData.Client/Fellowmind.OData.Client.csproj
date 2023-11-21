@@ -11,7 +11,7 @@
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>4.2.0</Version> 
+    <Version>4.2.1</Version> 
     <PackageReleaseNotes></PackageReleaseNotes>
     <LangVersion>7.3</LangVersion>
     <PackageIcon>fellowmind emblem_b_128x128px.jpg</PackageIcon>
@@ -26,6 +26,14 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
