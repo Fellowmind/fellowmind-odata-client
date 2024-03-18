@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>4.2.1</Version>
     <Authors>Juho Vainio</Authors>
@@ -13,6 +13,7 @@
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>odata</PackageTags>
+    <LangVersion>8.0</LangVersion>
     <PackageIcon>fellowmind emblem_r_128x128px.jpg</PackageIcon>
   </PropertyGroup>
 

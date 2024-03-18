@@ -491,6 +491,39 @@ namespace Fellowmind.OData.Client
         }
 
         /// <summary>
+        /// Gets all the pages for the given querty.
+        /// </summary>
+        /// <typeparam name="T">Type of the entity.</typeparam>
+        /// <param name="query">The query to execute.</param>
+        /// <returns></returns>
+        protected async IAsyncEnumerable<IEnumerable<T>> GetPagesAsync<T>(IQueryable<T> query) where T : BaseEntityType
+        {
+            // DataServiceQueryContinuation<T> contains the next link
+            DataServiceQueryContinuation<T> nextLink = null;
+
+            // Get the first page
+            QueryOperationResponse<T> response = await query.ExecuteAsync<T>() as QueryOperationResponse<T>;
+
+            do
+            {
+                if (nextLink != null)
+                {
+                    response = await DataContext.ExecuteAsync<T>(nextLink) as QueryOperationResponse<T>;
+                }
+
+                if (response == null)
+                {
+                    break;
+                }
+
+                yield return response.ToList();
+            }
+
+            // Loop if there is a next link
+            while ((nextLink = response.GetContinuation()) != null);
+        }
+
+        /// <summary>
         /// Clears tracking collection for the given type.
         /// </summary>
         /// <typeparam name="T">Entity type to untrack.</typeparam>

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Juho Vainio, Mikko Kunnari</Authors>
     <Company>Fellowmind Oy Ab</Company>
@@ -13,7 +13,7 @@
     <RepositoryType>git</RepositoryType>
     <Version>4.2.1</Version> 
     <PackageReleaseNotes></PackageReleaseNotes>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <PackageIcon>fellowmind emblem_b_128x128px.jpg</PackageIcon>
   </PropertyGroup>
 
