@@ -11,7 +11,7 @@
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>4.2.1</Version> 
+    <Version>4.3.0</Version> 
     <PackageReleaseNotes></PackageReleaseNotes>
     <LangVersion>8.0</LangVersion>
     <PackageIcon>fellowmind emblem_b_128x128px.jpg</PackageIcon>
