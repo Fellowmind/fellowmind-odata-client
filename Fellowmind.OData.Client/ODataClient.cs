@@ -348,6 +348,19 @@ namespace Fellowmind.OData.Client
             DataContext.Detach(entity);
         }
 
+        public async Task<IODataSaveResult> DeepInsertAsync<T>(T entity, SaveOptions saveOptions) where T : BaseEntityType
+        {
+            DataServiceResponse response = await DataContext.DeepInsertAsync(entity).ConfigureAwait(false);
+
+            if (!saveOptions.HasFlag(SaveOptions.SkipContextReCreationAfterSave))
+            {
+                UntrackAll();
+                RefreshDataContext();
+            }
+
+            return new ODataSaveResult(true, response);
+        }
+
         /// <summary>
         /// Save changes to the target system with specified options.
         /// </summary>
