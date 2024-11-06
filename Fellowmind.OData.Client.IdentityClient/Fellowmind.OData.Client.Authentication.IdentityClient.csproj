@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>4.2.2</Version>
     <Authors>Mikko Kunnari</Authors>
     <Company>Fellowmind Oy Ab</Company>
     <Product>Fellowmind.OData.Client</Product>
@@ -12,7 +13,6 @@
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>odata</PackageTags>
-    <Version>4.2.1</Version>
     <PackageIcon>fellowmind emblem_r_128x128px.jpg</PackageIcon> 
   </PropertyGroup>
 
@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Identity.Client" Version="4.57.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.65.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>4.2.2</Version>
     <Authors>Mikko Kunnari</Authors>
     <Company>Fellowmind Oy Ab</Company>
     <Product>Fellowmind.OData.Client</Product>
@@ -12,7 +13,6 @@
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>odata</PackageTags>
-    <Version>4.2.1</Version>
     <PackageIcon>fellowmind emblem_b_128x128px.jpg</PackageIcon> 
   </PropertyGroup>
 
@@ -37,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.OData.Client" Version="7.9.0" />
+    <PackageReference Include="Microsoft.OData.Client" Version="[7.20.0,7.21.4]" />
   </ItemGroup>
 
 </Project>

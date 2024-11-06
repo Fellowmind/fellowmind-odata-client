@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
-    <PackageReference Include="Microsoft.OData.Client" Version="7.9.0" />
+    <PackageReference Include="Microsoft.OData.Client" Version="7.20.0" />
   </ItemGroup>
 
 </Project>
