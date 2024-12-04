@@ -28,8 +28,8 @@ namespace Fellowmind.OData.Client.Authentication.AzureIdentity
             }
 
             _tokenCredential = new ChainedTokenCredential(
-                new ManagedIdentityCredential(string.IsNullOrEmpty(settings.ManagedIdentityId) ? null : settings.ManagedIdentityId),
                 new EnvironmentCredential(),
+                new ManagedIdentityCredential(string.IsNullOrEmpty(settings.ManagedIdentityId) ? null : settings.ManagedIdentityId),
                 new DefaultAzureCredential()
                 );
             
