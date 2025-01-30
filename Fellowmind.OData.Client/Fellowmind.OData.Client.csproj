@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>4.2.2</Version> 
+    <Version>4.2.4-preview</Version> 
     <Authors>Juho Vainio, Mikko Kunnari</Authors>
     <Company>Fellowmind Oy Ab</Company>
     <Description>Helper library for Microsoft.OData.Client that provides generic methods for working with CE and OPS entities.</Description>
