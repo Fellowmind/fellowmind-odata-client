@@ -4,13 +4,9 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fellowmind.OData.Client", "Fellowmind.OData.Client\Fellowmind.OData.Client.csproj", "{8CDC780D-5626-44EF-A376-4C2568D3F459}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fellowmind.OData.Tests", "Fellowmind.OData.Tests\Fellowmind.OData.Tests.csproj", "{2B55DF30-6913-4372-9130-FD247510156F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fellowmind.OData.Client.Core", "Fellowmind.OData.Client.Core\Fellowmind.OData.Client.Core.csproj", "{3546AE3A-F44F-4454-BC67-79715599DF93}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fellowmind.OData.Client.Authentication.IdentityClient", "Fellowmind.OData.Client.IdentityClient\Fellowmind.OData.Client.Authentication.IdentityClient.csproj", "{1C639760-FD9F-475A-9E0F-F61543551106}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fellowmind.OData.TestServer", "Fellowmind.OData.TestServer\Fellowmind.OData.TestServer.csproj", "{60FD5B31-BCBA-48C6-92DB-113B41AAD12F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fellowmind.OData.Test.Models", "Fellowmind.OData.Test.Models\Fellowmind.OData.Test.Models.csproj", "{72DBDDB6-97D1-46C3-B332-94AE21C7B475}"
 EndProject
@@ -31,10 +27,6 @@ Global
 		{8CDC780D-5626-44EF-A376-4C2568D3F459}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CDC780D-5626-44EF-A376-4C2568D3F459}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CDC780D-5626-44EF-A376-4C2568D3F459}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B55DF30-6913-4372-9130-FD247510156F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B55DF30-6913-4372-9130-FD247510156F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B55DF30-6913-4372-9130-FD247510156F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B55DF30-6913-4372-9130-FD247510156F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3546AE3A-F44F-4454-BC67-79715599DF93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3546AE3A-F44F-4454-BC67-79715599DF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3546AE3A-F44F-4454-BC67-79715599DF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,10 +35,6 @@ Global
 		{1C639760-FD9F-475A-9E0F-F61543551106}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C639760-FD9F-475A-9E0F-F61543551106}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C639760-FD9F-475A-9E0F-F61543551106}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60FD5B31-BCBA-48C6-92DB-113B41AAD12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60FD5B31-BCBA-48C6-92DB-113B41AAD12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60FD5B31-BCBA-48C6-92DB-113B41AAD12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60FD5B31-BCBA-48C6-92DB-113B41AAD12F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{72DBDDB6-97D1-46C3-B332-94AE21C7B475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{72DBDDB6-97D1-46C3-B332-94AE21C7B475}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72DBDDB6-97D1-46C3-B332-94AE21C7B475}.Release|Any CPU.ActiveCfg = Release|Any CPU

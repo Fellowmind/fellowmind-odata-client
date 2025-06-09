@@ -217,7 +217,7 @@ namespace Fellowmind.OData.Client
             }
 
             IBaseEntityType baseEntityType = entity;
-            object trackingContext =  baseEntityType.Context;
+            object trackingContext =  baseEntityType.DataServiceContext;
 
             if (trackingContext != null && trackingContext != DataContext)
             {
@@ -306,11 +306,11 @@ namespace Fellowmind.OData.Client
 
             // Make sure the entity is detached from possible previous context.
             IBaseEntityType baseEntityType = entity;
-            DataServiceContext trackingContext = baseEntityType.Context;
+            DataServiceContext trackingContext = baseEntityType.DataServiceContext;
 
             if (trackingContext != null && trackingContext != DataContext)
             {
-                baseEntityType.Context = DataContext;
+                baseEntityType.DataServiceContext = DataContext;
                 
                 // Detect if expand was used in other context, because that will screw up this context and cannot be repaired.
                 bool expandWasUsed = false;
