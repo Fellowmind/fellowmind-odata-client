@@ -28,10 +28,18 @@ namespace Fellowmind.OData.Client.Core
             return (await query.ToODataDTS().ExecuteAsync(cancellationToken).ConfigureAwait(false)).ToList();
         }
 
+        /// <summary>
+        /// Uses AddQueryOption to add multiple conditions separated by OR operator.
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="query">The query to add the filters to</param>
+        /// <param name="fieldName">The entitiy field name</param>
+        /// <param name="values">The values are escaped using Uri.EscapeDataString</param>
+        /// <returns></returns>
         public static DataServiceQuery<TEntity> WhereContains<TEntity>(this DataServiceQuery<TEntity> query, string fieldName, IEnumerable<string> values) where TEntity : class
         {
             // Contains is not supported by Mircosoft.ODataClient so we need to build it ourselves
-            var filter = string.Join(" or ", values.Select(x => $"({fieldName} eq '{x}')"));
+            var filter = string.Join(" or ", values.Select(x => $"({fieldName} eq '{Uri.EscapeDataString(x)}')"));
             return query.AddQueryOption("$filter", filter);
         }
 

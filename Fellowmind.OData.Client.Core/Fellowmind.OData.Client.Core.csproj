@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>8.1.0-preview</Version>
+    <Version>8.1.1-preview</Version>
     <Authors>Mikko Kunnari</Authors>
     <Company>Fellowmind Oy Ab</Company>
     <Product>Fellowmind.OData.Client</Product>
